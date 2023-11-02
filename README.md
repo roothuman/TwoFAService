@@ -5,7 +5,7 @@ The project is a Two-Factor Authentication (2FA) service implemented in ASP.NET 
 
 1. Send Confirmation Code:
 
-Endpoint: POST /api/TwoFactorAuth/send-code  (example: https://localhost:7145/api/TwoFactorAuth/send-code)
+Endpoint: POST /api/TwoFactorAuth/send-code
 Description: Sends a confirmation code to a specified phone number.
 Request Body:
 {
@@ -26,7 +26,7 @@ Error (400 Bad Request):
 
 2. Check Confirmation Code:
 
-Endpoint: POST /api/TwoFactorAuth/check-code (example: https://localhost:7145/api/TwoFactorAuth/check-code)
+Endpoint: POST /api/TwoFactorAuth/check-code
 Description: Checks if a received confirmation code is valid for the specified phone number.
 Request Body:
 {
