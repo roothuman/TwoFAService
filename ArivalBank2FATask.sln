@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArivalBank2FATask", "ArivalBank2FATask.csproj", "{B93C8DE1-7E13-487C-BA1F-6C6928131476}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B93C8DE1-7E13-487C-BA1F-6C6928131476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93C8DE1-7E13-487C-BA1F-6C6928131476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93C8DE1-7E13-487C-BA1F-6C6928131476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93C8DE1-7E13-487C-BA1F-6C6928131476}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4A5349B-A781-4438-8C1D-39D713015677}
+	EndGlobalSection
+EndGlobal
