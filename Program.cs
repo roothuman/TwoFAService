@@ -1,5 +1,7 @@
 using ArivalBank2FATask.AppService;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System.Configuration;
 
 namespace ArivalBank2FATask
 {
@@ -12,6 +14,11 @@ namespace ArivalBank2FATask
             // Add services to the container.
             builder.Services.AddControllers();
 
+            // In Startup.cs
+            builder.Services.AddDbContext<ActiveCodeDbContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -23,8 +30,8 @@ namespace ArivalBank2FATask
 
             builder.Services.Configure<TwoFaConfig>(configuration.GetSection("TwoFactorAuthConfig"));
 
-            builder.Services.AddSingleton<ITwoFAService, TwoFAService>();
-            builder.Services.AddSingleton<ISmsSender, MockSmsSender>();
+            builder.Services.AddScoped<ITwoFAService, TwoFAService>();
+            builder.Services.AddScoped<ISmsSender, MockSmsSender>();
 
             var app = builder.Build();
 
