@@ -49,28 +49,6 @@ namespace ArivalBank2FATask.AppService
             return true;
         }
 
-        //public bool VerifyConfirmationCode(string phoneNumber, string code)
-        //{
-        //    // Check if the user has any active codes
-        //    var activeCode = _dbContext.ActiveCodes
-        //        .Where(ac => ac.PhoneNumber == phoneNumber)
-        //        .OrderBy(ac => ac.Timestamp)
-        //        .FirstOrDefault();
-
-        //    if (activeCode == null || activeCode.Code != code || activeCode.Timestamp.AddMinutes(_config.CodeLifetimeMinutes) < DateTime.Now)
-        //    {
-        //        _logger.LogWarning("Invalid code or code expired: {phoneNumber} {code}", phoneNumber, code);
-        //        return false;
-        //    }
-
-        //    // Remove the code from the database
-        //    _dbContext.ActiveCodes.Remove(activeCode);
-        //    _dbContext.SaveChanges();
-
-        //    return true;
-       // }
-
-
         public bool VerifyConfirmationCode(string phoneNumber, string code)
         {
             // Check if the user has any active codes
